@@ -1,0 +1,34 @@
+@import "__colors.scss";
+@import "__sizes.scss";
+
+header{
+    
+    display: flex;
+    justify-content: space-around;
+    background-color: $backgroundGray;
+    box-sizing: border-box;
+    margin:0 auto;
+
+    .logo{
+        flex: 1;
+        text-align: center;
+        font-size: $logoSize;
+        align-items: center;
+
+        span{
+            color:$basicGreen;  
+        }
+    }
+
+    nav{
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+        align-items: center;
+        font-size: $navSize;
+
+        button{
+            display:none;
+        }
+    }
+}

@@ -1,3 +1,8 @@
 @import "navigation.scss";
 @import "__colors.scss";
-@import "__sizes";
+@import "__sizes.scss";
+
+body{
+    background-image: url(../images/main_bg.png);
+    background-color: $backgroundGray;
+}
