@@ -33,16 +33,24 @@ header{
         align-items: center;
         font-size: $navSize;
 
-        button{
+        input{
+            display:none;
+            background: url("../images/1.png");
+            width: 30px;
+            height: 30px;
+        }
+    }
+    @media screen and (max-width: 1000px){
+        nav input{
+            display:block;
+        }
+        nav div a{
             display:none;
         }
-        @media screen and (max-width: 1000px){
-            button{
-                display:block;
-            }
-            div a{
-                display:none;
-            }
+        .logo span{
+            color:white;
         }
+        background-color: $basicGreen;
+        color:white;
     }
 }
