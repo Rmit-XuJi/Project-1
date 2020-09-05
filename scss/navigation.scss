@@ -2,12 +2,18 @@
 @import "__sizes.scss";
 
 header{
-    
+    position: fixed;
+    top:0;
     display: flex;
     justify-content: space-around;
     background-color: $backgroundGray;
     box-sizing: border-box;
     margin:0 auto;
+    border:5px solid red;
+    width: 100%;
+    height: $headerHeight;
+    align-items: center;
+    z-index: 1000;
 
     .logo{
         flex: 1;
@@ -16,7 +22,7 @@ header{
         align-items: center;
 
         span{
-            color:$basicGreen;  
+            color:$basicGreen; 
         }
     }
 
@@ -29,6 +35,14 @@ header{
 
         button{
             display:none;
+        }
+        @media screen and (max-width: 1000px){
+            button{
+                display:block;
+            }
+            div a{
+                display:none;
+            }
         }
     }
 }

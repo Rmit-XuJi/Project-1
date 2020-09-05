@@ -1,0 +1,61 @@
+@import "__colors.scss";
+@import "__sizes.scss";
+
+.homePage{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+
+    height:$homeHeight;
+    max-width:$maxPageWidth;
+    align-items: center;
+    margin:0 auto;
+
+    border-radius: 15px;
+    box-shadow: 0px 3px 30px 0px rgba(0,0,0,0.3);
+    
+    background-size: cover;
+
+    &__top{
+        flex: 1;
+        -webkit-flex: 1;
+        display: -webkit-flex;
+        display: flex;
+
+        position: relative;
+        height:$homeHeight/2;
+        width:100%;
+        background-image: url("../images/sp_main_bg.png");
+        background-size: cover;
+        background-color: $basicGreen;
+        border-radius: 15px 15px 0 0;
+
+        &-photo{
+            flex: 1;
+            -webkit-flex: 1;
+            margin: 50px 0 0 50px;
+            box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
+            max-width: $homeHeight/2;
+            transition: all 0.3s ease-in-out;
+            img{
+                height: $homeHeight/2;
+            }
+        }
+        &-photo:hover{
+            transform: translateY(-9px);
+            box-shadow: 0 18px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        &-personalInfo{
+            flex: 3;
+            -webkit-flex: 3;
+            text-align: center;
+        }
+    }
+    &__bottom{
+        flex: 1;
+        -webkit-flex: 1;
+        background-color: white;
+        border-radius: 0 0 15px 15px;
+    }
+}
