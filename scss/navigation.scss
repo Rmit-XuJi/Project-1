@@ -2,12 +2,18 @@
 @import "__sizes.scss";
 
 header{
-    
+    position: fixed;
+    top:0;
     display: flex;
     justify-content: space-around;
     background-color: $backgroundGray;
     box-sizing: border-box;
     margin:0 auto;
+    border:5px solid red;
+    width: 100%;
+    height: $headerHeight;
+    align-items: center;
+    z-index: 1000;
 
     .logo{
         flex: 1;
@@ -16,7 +22,7 @@ header{
         align-items: center;
 
         span{
-            color:$basicGreen;  
+            color:$basicGreen; 
         }
     }
 
@@ -27,8 +33,24 @@ header{
         align-items: center;
         font-size: $navSize;
 
-        button{
+        input{
+            display:none;
+            background: url("../images/1.png");
+            width: 30px;
+            height: 30px;
+        }
+    }
+    @media screen and (max-width: 1000px){
+        nav input{
+            display:block;
+        }
+        nav div a{
             display:none;
         }
+        .logo span{
+            color:white;
+        }
+        background-color: $basicGreen;
+        color:white;
     }
 }

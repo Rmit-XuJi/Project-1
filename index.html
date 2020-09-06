@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link  rel="stylesheet" href="css/index.css" type="text/css">
         <title>John Doe</title>
@@ -15,33 +16,58 @@
             <div><a href="#services">Services</a></div>
             <div><a href="#blog">Blog</a></div>
             <div><a href="#connect">Connect</a></div>
-            <div><button>Menu</button>
+            <div><input type="button"></input>
         </nav>
     </header>
 
     <body>
+         <!--home page-->
         <section>
             <div class="homePage">
-                <div class="home__top">
-                    <div class="home__top-photo">
+                <div class="homePage__top">
+                    <div class="homePage__top-photo">
                         <img src="images/photo.png" alt="photo">
                     </div>
-                    <div class="home__top-identity">
-
+                    <div class="homePage__top-personalTitle">
+                        <div class="homePage__top-personalTitle-name"><h2>John Doe</h2></div>
+                        <div class="homePage__top-personalTitle-job"><h3>Web Designer</h3></div>
+                        <div class="homePage__top-personalTitle-social">
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="home__bottom"></div>
+                <div class="homePage__bottom">
+                    <div class="homePage__bottom-selfDes">
+                        <p><h3>About <span>Me</span></h3></p>
+                        <p>Hello! I’m John Doe. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac. Duis nulla enim, condimentum nec ultricies.</p>
+                    </div>
+                    <div class="homePage__bottom-selfInfo">
+                        <ul>
+                            <li><span class="homePage__bottom-selfInfo-title">Age</span><span class="homePage__bottom-selfInfo-value">29</span></li>
+                            <li><span class="homePage__bottom-selfInfo-title">Residence</span><span class="homePage__bottom-selfInfo-value">Australia</span></li>
+                            <li><span class="homePage__bottom-selfInfo-title">Address</span><span class="homePage__bottom-selfInfo-value">Level 3 / 57 Coronation Drive, Brisbane</span></li>
+                            <li><span class="homePage__bottom-selfInfo-title">e-mail</span><span class="homePage__bottom-selfInfo-value"><a href="mailto:email@example.com">info@jiangren.com.au</a></span></li>
+                            <li><span class="homePage__bottom-selfInfo-title">Phone</span><span class="homePage__bottom-selfInfo-value">+0123 123 456 789</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
+        <!--resume page-->
         <section>
             <div class="resumePage"></div>
         </section>
+        <!--services page-->
         <section>
             <div class="servicesPage"></div>
         </section>
+        <!--blog page-->
         <section>
             <div class="blogPage"></div>
         </section>
+        <!--connect page-->
         <section>
             <div class="connectPage"></div>
         </section>
