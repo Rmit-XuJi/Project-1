@@ -1,5 +1,6 @@
 @import "navigation.scss";
 @import "homepage.scss";
+@import "resumepage.scss";
 
 body{
     background-image: url(../images/main_bg.png);
@@ -8,5 +9,41 @@ body{
 
     section{
         margin-top: 20vh;
+    }
+
+    h2{
+        font-size: $h2Size;
+    }
+    h3{
+        font-size: $h3Size;
+    }
+    h4{
+        font-size: $h4Size;
+    }
+    h5{
+        font-size: $h5Size;
+    }
+}
+
+.page{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    max-width:$maxPageWidth;
+    align-items: center;
+    margin:0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 3px 30px 0px rgba(0,0,0,0.3);
+
+    &__top{
+        width:100%;
+        background-image: url("../images/sp_main_bg.png");
+        background-size: cover;
+        background-color: $basicGreen;
+        border-radius: 15px 15px 0 0;
+    }
+    &__bottom{
+        background-color: white;
+        border-radius: 0 0 15px 15px;
     }
 }
