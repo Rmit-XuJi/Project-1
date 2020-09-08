@@ -2,13 +2,20 @@
 @import "homepage.scss";
 @import "resumepage.scss";
 
+
 body{
     background-image: url(../images/main_bg.png);
     background-color: $backgroundGray;
     box-sizing: border-box;
+    overflow-y:hidden;
 
+    .sectionArea{
+        height: 100vh;
+        overflow-y:auto;
+    }
     section{
         margin-top: 20vh;
+        display: none;
     }
 
     h2{

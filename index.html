@@ -5,24 +5,31 @@
         <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link  rel="stylesheet" href="css/index.css" type="text/css">
+        <script type="text/javascript" src="js/index.js"></script>
         <title>John Doe</title>
     </head>
     <header>
-        <div class="logo">John <span>Doe</span></div>
+        <div class="navBar">
+            <div class="logo">John <span>Doe</span></div>
             <!--Navigation bar and button menu-->
-        <nav>
-            <div><a href="#home">Home</a></div>
-            <div><a href="#resume">Resume</a></div>
-            <div><a href="#services">Services</a></div>
-            <div><a href="#blog">Blog</a></div>
-            <div><a href="#connect">Connect</a></div>
-            <div><input type="button"></input>
-        </nav>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#resume">Resume</a>
+                <a href="#services">Services</a>
+                <a href="#blog">Blog</a>
+                <a href="#connect">Connect</a>
+                <input type="button">
+                    <i class="fa fa-bars"></i>
+                </input>
+                
+            </nav>
+        </div>
     </header>
 
     <body>
+        <div class="sectionArea">
          <!--home page-->
-        <section>
+        <section class="homeSection">
             <div class="homePage page">
                 <div class="homePage__top page__top">
                     <div class="homePage__top-photo">
@@ -56,7 +63,7 @@
             </div>
         </section>
         <!--resume page-->
-        <section>
+        <section class="resumeSection">
             <div class="resumePage page">
                 <div class="resumePage__title page__top"><h2>Resume</h2></div>
                 <div class="resumePage__contains page__bottom">
@@ -64,6 +71,7 @@
                         <div class="resumePage__contains-past-education">
                             <h3>Education</h3>
                             <div class="resumePage__contains-element">
+                                <div class="resumePage__contains-element-link"></div>
                                 <div class="resumePage__contains-element-inner">
                                     <div><h4>Specialization Course</h4></div>
                                     <div><span>2010</span> <div class="resumePage__contains-element-inner-company">Apple Inc.</div></div>
@@ -71,6 +79,7 @@
                                 </div>
                             </div>
                             <div class="resumePage__contains-element">
+                                <div class="resumePage__contains-element-link"></div>
                                 <div class="resumePage__contains-element-inner">
                                     <div><h4>Specialization Course</h4></div>
                                     <div><span>2010</span> <div class="resumePage__contains-element-inner-company">Apple Inc.</div></div>
@@ -78,6 +87,7 @@
                                 </div>
                             </div>
                             <div class="resumePage__contains-element">
+                                <div class="resumePage__contains-element-link"></div>
                                 <div class="resumePage__contains-element-inner">
                                     <div><h4>Specialization Course</h4></div>
                                     <div><span>2010</span> <div class="resumePage__contains-element-inner-company">Apple Inc.</div></div>
@@ -88,6 +98,7 @@
                         <div class="resumePage__contains-past-experience">
                             <h3>Experience</h3>
                             <div class="resumePage__contains-element">
+                                <div class="resumePage__contains-element-link"></div>
                                 <div class="resumePage__contains-element-inner">
                                     <div><h4>Frontend-developer</h4></div>
                                     <div><span>Dec 2012 - Current</span> <div class="resumePage__contains-element-inner-company">Web Agency</div></div>
@@ -95,6 +106,7 @@
                                 </div>
                             </div>
                             <div class="resumePage__contains-element">
+                                <div class="resumePage__contains-element-link"></div>
                                 <div class="resumePage__contains-element-inner">
                                     <div><h4>Web Designer</h4></div>
                                     <div><span>Dec 2011 - Nov 2012</span> <div class="resumePage__contains-element-inner-company">Apple Inc.</div></div>
@@ -102,6 +114,7 @@
                                 </div>
                             </div>
                             <div class="resumePage__contains-element">
+                                <div class="resumePage__contains-element-link"></div>
                                 <div class="resumePage__contains-element-inner">
                                     <div><h4>Graphic Designer</h4></div>
                                     <div><span>Jan 2010 - Dec 2011</span> <div class="resumePage__contains-element-inner-company">Apple Inc.</div></div>
@@ -157,5 +170,6 @@
         <section>
             <div class="connectPage page"></div>
         </section>
+        </div>
     </body>
 </html>

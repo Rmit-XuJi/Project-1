@@ -1,5 +1,6 @@
 @import "__colors.scss";
 @import "__sizes.scss";
+@import "__animation.scss";
 
 .homePage{
     height:$homeHeight;
@@ -11,11 +12,8 @@
         display: -webkit-flex;
         display: flex;
         justify-content: center;
-
         position: relative;
-        height:$homeHeight/2;
-       
-
+        height:$homeHeight/2;   
         &-photo{
             flex: 1;
             -webkit-flex: 1;
