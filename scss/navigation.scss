@@ -5,6 +5,7 @@ header{
     position: fixed;
     top:0;
     display: flex;
+    display: -webkit-flex;
     justify-content: space-around;
     background-color: $backgroundGray;
     box-sizing: border-box;
@@ -15,11 +16,19 @@ header{
     align-items: center;
     z-index: 1000;
 
+    .navBar{
+        display: -webkit-flex;
+        display: flex;
+        flex: 1;
+        -webkit-flex:1;
+        max-width:$maxPageWidth;
+    }
+
     .logo{
         flex: 1;
-        text-align: center;
+        text-align: left;
         font-size: $logoSize;
-        align-items: center;
+        align-items: left;
 
         span{
             color:$basicGreen; 
@@ -32,6 +41,24 @@ header{
         justify-content: space-around;
         align-items: center;
         font-size: $navSize;
+        
+        a{
+            color:gray;
+            text-decoration: none;
+            &:hover{
+                color:black;
+                &::after{
+                    position: relative;
+                    content:"";
+                    display:block;
+                    width:25px;
+                    height:0px;
+                    border: 1.5px solid $basicGreen;
+                    margin: 0px 0px 0px 10px;
+                    background-color: $basicGreen;
+                }
+            }
+        }
 
         input{
             display:none;

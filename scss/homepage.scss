@@ -12,11 +12,8 @@
         display: -webkit-flex;
         display: flex;
         justify-content: center;
-
         position: relative;
-        height:$homeHeight/2;
-       
-
+        height:$homeHeight/2;   
         &-photo{
             flex: 1;
             -webkit-flex: 1;
