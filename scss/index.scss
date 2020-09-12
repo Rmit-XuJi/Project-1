@@ -8,6 +8,7 @@ body{
     background-color: $backgroundGray;
     box-sizing: border-box;
     overflow-y:hidden;
+    font-family: 'Roboto', Helvetica, sans-serif;
 
     .sectionArea{
         height: 100vh;
@@ -15,6 +16,7 @@ body{
     }
     section{
         margin-top: 20vh;
+        margin-bottom: 10vh;
         display: none;
     }
 
@@ -52,5 +54,22 @@ body{
     &__bottom{
         background-color: white;
         border-radius: 0 0 15px 15px;
+    }
+}
+
+footer{
+    position: fixed;
+    z-index: -10;
+    bottom: 3vh;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    div{
+        color: gray;
+    }
+    a{
+        color: $basicGreen;
+        text-decoration: none;
     }
 }
