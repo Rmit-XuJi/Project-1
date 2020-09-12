@@ -143,6 +143,7 @@
         }
         @media screen and (max-width: 800px){
             height:$resumeContainHeight*2;
+            margin-bottom: 80px;;
             &-past{
                 flex-direction: column;
             }

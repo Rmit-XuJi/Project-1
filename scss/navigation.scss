@@ -10,18 +10,20 @@ header{
     background-color: $backgroundGray;
     box-sizing: border-box;
     margin:0 auto;
-    border:5px solid red;
     width: 100%;
     height: $headerHeight;
     align-items: center;
     z-index: 1000;
-
     .navBar{
         display: -webkit-flex;
         display: flex;
         flex: 1;
         -webkit-flex:1;
         max-width:$maxPageWidth;
+        &__mobileNavButton{
+            display: none;
+            width: 150px;
+        }
     }
 
     .logo{
@@ -40,8 +42,7 @@ header{
         flex: 1;
         justify-content: space-around;
         align-items: center;
-        font-size: $navSize;
-        
+        font-size: $navSize;  
         a{
             color:gray;
             text-decoration: none;
@@ -51,27 +52,61 @@ header{
                     position: relative;
                     content:"";
                     display:block;
-                    width:25px;
                     height:0px;
                     border: 1.5px solid $basicGreen;
-                    margin: 0px 0px 0px 10px;
+                    margin: 0 20% 0 20%;
                     background-color: $basicGreen;
                 }
             }
         }
-
-        input{
-            display:none;
-            background: url("../images/1.png");
-            width: 30px;
-            height: 30px;
-        }
     }
+    .mobileNav{
+        position: fixed;
+        top: $headerHeight;
+        right: 0;
+        width: 20vw;
+        height: 80vh;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        background-color: $basicGreen;
+        justify-content: space-around;
+        font-size: $navSize;
+        a{
+            color:gray;
+            text-decoration: none;
+            text-align: center;
+            justify-items: center;
+            &:hover{
+                color:black;
+                &::after{
+                    position: relative;
+                    content:"";
+                    display:block;
+                    height:0px;
+                    border: 1.5px solid $backgroundGray;
+                    margin: 0px 40% 0px 40%;
+                    background-color: $backgroundGray;
+                }
+            }
+        }
+        
+    }
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+    }
+
     @media screen and (max-width: 1000px){
-        nav input{
+        .navBar__mobileNavButton{
             display:block;
         }
-        nav div a{
+        nav > a{
             display:none;
         }
         .logo span{
