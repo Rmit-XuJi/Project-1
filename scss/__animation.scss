@@ -1,0 +1,31 @@
+
+.disappearingSection{
+    animation: sectionDisappear 3s;
+    -webkit-animation: sectionDisappear 3s;
+    display: none;
+}
+.showingPage{
+    animation: sectionShow 3s;
+    -webkit-animation: sectionShow 3s;
+    display:block;
+}
+
+@keyframes sectionDisappear{
+    to{
+		-webkit-transform:rotateY(-90deg); /* Safari and Chrome */
+        -webkit-transform-origin:-20% -20% 0px;
+        filter:alpha(Opacity=10);
+        -moz-opacity:0.5;
+        opacity: 0.5;
+    }
+}
+
+@keyframes sectionShow{
+    from{
+		-webkit-transform:rotateY(90deg); /* Safari and Chrome */
+        -webkit-transform-origin:120% 100% 0px;
+        filter:alpha(Opacity=10);
+        -moz-opacity:0.5;
+        opacity: 0.5;
+    }
+}

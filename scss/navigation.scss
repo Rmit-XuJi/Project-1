@@ -2,21 +2,38 @@
 @import "__sizes.scss";
 
 header{
-    
+    position: fixed;
+    top:0;
     display: flex;
+    display: -webkit-flex;
     justify-content: space-around;
     background-color: $backgroundGray;
     box-sizing: border-box;
     margin:0 auto;
+    width: 100%;
+    height: $headerHeight;
+    align-items: center;
+    z-index: 1000;
+    .navBar{
+        display: -webkit-flex;
+        display: flex;
+        flex: 1;
+        -webkit-flex:1;
+        max-width:$maxPageWidth;
+        &__mobileNavButton{
+            display: none;
+            width: 150px;
+        }
+    }
 
     .logo{
         flex: 1;
-        text-align: center;
+        text-align: left;
         font-size: $logoSize;
-        align-items: center;
+        align-items: left;
 
         span{
-            color:$basicGreen;  
+            color:$basicGreen; 
         }
     }
 
@@ -25,10 +42,77 @@ header{
         flex: 1;
         justify-content: space-around;
         align-items: center;
+        font-size: $navSize;  
+        a{
+            color:gray;
+            text-decoration: none;
+            &:hover{
+                color:black;
+                &::after{
+                    position: relative;
+                    content:"";
+                    display:block;
+                    height:0px;
+                    border: 1.5px solid $basicGreen;
+                    margin: 0 20% 0 20%;
+                    background-color: $basicGreen;
+                }
+            }
+        }
+    }
+    .mobileNav{
+        position: fixed;
+        top: $headerHeight;
+        right: 0;
+        width: 20vw;
+        height: 80vh;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        background-color: $basicGreen;
+        justify-content: space-around;
         font-size: $navSize;
+        a{
+            color:gray;
+            text-decoration: none;
+            text-align: center;
+            justify-items: center;
+            &:hover{
+                color:black;
+                &::after{
+                    position: relative;
+                    content:"";
+                    display:block;
+                    height:0px;
+                    border: 1.5px solid $backgroundGray;
+                    margin: 0px 40% 0px 40%;
+                    background-color: $backgroundGray;
+                }
+            }
+        }
+        
+    }
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+    }
 
-        button{
+    @media screen and (max-width: 1000px){
+        .navBar__mobileNavButton{
+            display:block;
+        }
+        nav > a{
             display:none;
         }
+        .logo span{
+            color:white;
+        }
+        background-color: $basicGreen;
+        color:white;
     }
 }

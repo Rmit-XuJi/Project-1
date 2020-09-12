@@ -1,8 +1,75 @@
 @import "navigation.scss";
-@import "__colors.scss";
-@import "__sizes.scss";
+@import "homepage.scss";
+@import "resumepage.scss";
+
 
 body{
     background-image: url(../images/main_bg.png);
     background-color: $backgroundGray;
+    box-sizing: border-box;
+    overflow-y:hidden;
+    font-family: 'Roboto', Helvetica, sans-serif;
+
+    .sectionArea{
+        height: 100vh;
+        overflow-y:auto;
+    }
+    section{
+        margin-top: 20vh;
+        margin-bottom: 10vh;
+        display: none;
+    }
+
+    h2{
+        font-size: $h2Size;
+    }
+    h3{
+        font-size: $h3Size;
+    }
+    h4{
+        font-size: $h4Size;
+    }
+    h5{
+        font-size: $h5Size;
+    }
+}
+
+.page{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    max-width:$maxPageWidth;
+    align-items: center;
+    margin:0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 3px 30px 0px rgba(0,0,0,0.3);
+
+    &__top{
+        width:100%;
+        background-image: url("../images/sp_main_bg.png");
+        background-size: cover;
+        background-color: $basicGreen;
+        border-radius: 15px 15px 0 0;
+    }
+    &__bottom{
+        background-color: white;
+        border-radius: 0 0 15px 15px;
+    }
+}
+
+footer{
+    position: fixed;
+    z-index: -10;
+    bottom: 3vh;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    div{
+        color: gray;
+    }
+    a{
+        color: $basicGreen;
+        text-decoration: none;
+    }
 }
