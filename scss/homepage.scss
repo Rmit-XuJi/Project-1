@@ -130,17 +130,18 @@
 
     @media screen and (max-width: 800px){
         &__top{
+            height: $homeHeight*1.5;
             &-photo{
                 max-width: 100%;
-                margin:0;
+                margin:15vh 0;
                 img{
-                    height: $homeHeight/3;
+                    height: $homeHeight/2.5;
                 }
             }
             text-align: center;
             flex-direction: column;
         }
-        height: $homeHeight*2;
+        height: $homeHeight*2.5;
 
         &__bottom{
             text-align: left;

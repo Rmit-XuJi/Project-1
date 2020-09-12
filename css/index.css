@@ -267,18 +267,19 @@ header .show {
 }
 @media screen and (max-width: 800px) {
   .homePage {
-    height: 1100px;
+    height: 1375px;
   }
   .homePage__top {
+    height: 825px;
     text-align: center;
     flex-direction: column;
   }
   .homePage__top-photo {
     max-width: 100%;
-    margin: 0;
+    margin: 15vh 0;
   }
   .homePage__top-photo img {
-    height: 183.3333333333px;
+    height: 220px;
   }
   .homePage__bottom {
     text-align: left;
